@@ -1,8 +1,20 @@
+import 'package:animetionlist/animatedListClass.dart';
 import 'package:flutter/material.dart';
 
+import 'FadeInImageClass.dart';
 import 'animatedAlignClass.dart';
 import 'animatedContainerClass.dart';
+import 'animatedCrossFadeClass.dart';
 import 'animatedDefaultTextStyleClass.dart';
+import 'animatedIconClass.dart';
+import 'animatedModalBarrierClass.dart';
+import 'animatedOpacityClass.dart';
+import 'animatedPaddingClass.dart';
+import 'animatedPhysicalModelClass.dart';
+import 'animatedPositionedDirectionalClass.dart';
+import 'animatedSizeClass.dart';
+import 'animatedThemeClass.dart';
+import 'heroClass.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,24 +22,20 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+  static final ThemeData _lightTheme = ThemeData(
+      primaryColor: Colors.blue,
+      textTheme: const TextTheme(bodyText2: TextStyle(color: Colors.black)), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.blue));
 
+  static final ThemeData _darkTheme = ThemeData(
+      primaryColor: Colors.blue,
+      textTheme: const TextTheme(bodyText2: TextStyle(color: Colors.white)), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black));
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
+      theme: _lightTheme,
+      darkTheme: _darkTheme,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -52,7 +60,23 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var listItem = ["AnimatedAlign", "AnimatedContainer", "AnimatedDefaultTextStyle"];
+  var listItem = [
+    "AnimatedAlign：確認完了",
+    "AnimatedContainer：確認完了",
+    "AnimatedDefaultTextStyle：確認完了",
+    "AnimatedOpacity：確認完了",
+    "AnimatedPadding：確認完了",
+    "AnimatedPhysicalModel：確認完了",
+    "AnimatedPositionedDirectional：確認完了",
+    "AnimatedTheme：確認完了",
+    "AnimatedCrossFade：確認完了",
+    "AnimatedIcon：確認完了",
+    "AnimatedList：確認完了",
+    "AnimatedModalBarrier：確認完了",
+    "AnimatedSize：確認完了",
+    "FadeInImage：修正必要",
+    "Hero：確認完了"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -85,16 +109,66 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _tapTile(int index) {
     //画面遷移する画面の初期値
-    Route route = MaterialPageRoute(builder: (context) => AnimatedAlignClass());
-
+    Route route =
+        MaterialPageRoute(builder: (context) => const AnimatedAlignClass());
     switch (index) {
       case 0:
         break;
       case 1:
-        route = MaterialPageRoute(builder: (context) => AnimatedContainerClass());
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedContainerClass());
         break;
       case 2:
-        route = MaterialPageRoute(builder: (context) => AnimatedDefaultTextStyleClass());
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedDefaultTextStyleClass());
+        break;
+      case 3:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedOpacityClass());
+        break;
+      case 4:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedPaddingClass());
+        break;
+      case 5:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedPhysicalModelClass());
+        break;
+      case 6:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedPositionedDirectionalClass());
+        break;
+      case 7:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedThemeClass());
+        break;
+      case 8:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedCrossFadeClass());
+        break;
+      case 9:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedIconClass());
+        break;
+      case 10:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedListClass());
+        break;
+      case 11:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedModalBarrierClass());
+        break;
+      case 12:
+        route = MaterialPageRoute(
+            builder: (context) => const AnimatedSizeClass());
+        break;
+      case 13:
+        route = MaterialPageRoute(
+            builder: (context) => const FadeInImageClass());
+        break;
+      case 14:
+        route = MaterialPageRoute(
+            builder: (context) => const HeroClass());
         break;
     }
     //画面遷移処理
