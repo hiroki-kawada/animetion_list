@@ -61,21 +61,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var listItem = [
-    "AnimatedAlign：確認完了",
-    "AnimatedContainer：確認完了",
-    "AnimatedDefaultTextStyle：確認完了",
-    "AnimatedOpacity：確認完了",
-    "AnimatedPadding：確認完了",
-    "AnimatedPhysicalModel：確認完了",
-    "AnimatedPositionedDirectional：確認完了",
-    "AnimatedTheme：確認完了",
-    "AnimatedCrossFade：確認完了",
-    "AnimatedIcon：確認完了",
-    "AnimatedList：確認完了",
-    "AnimatedModalBarrier：確認完了",
-    "AnimatedSize：確認完了",
-    "FadeInImage：修正必要",
-    "Hero：確認完了"
+    "AnimatedAlign",
+    "AnimatedContainer",
+    "AnimatedDefaultTextStyle",
+    "AnimatedOpacity",
+    "AnimatedPadding",
+    "AnimatedPhysicalModel",
+    "AnimatedPositionedDirectional",
+    "AnimatedTheme",
+    "AnimatedCrossFade",
+    "AnimatedIcon",
+    "AnimatedList",
+    "AnimatedModalBarrier",
+    "AnimatedSize",
+    "FadeInImage",
+    "Hero"
   ];
 
   @override
