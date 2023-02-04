@@ -48,3 +48,9 @@
 
 ### Hero
 * AnimationControllerなしに簡単に良い感じのHeroアニメーションを実現
+
+### Hero
+* AnimationControllerなしに簡単に良い感じのHeroアニメーションを実現
+
+### OriginalLIstClass
+* 「Card」内にAnimated系Widgetを追加して内部データ「Card」に表示して羅列
