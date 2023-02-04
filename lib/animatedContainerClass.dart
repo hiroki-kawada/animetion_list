@@ -48,7 +48,6 @@ class _MyAnimatedContainer extends State<MyAnimatedContainer> {
           ),
         ),
       ),
-
     );
   }
 }

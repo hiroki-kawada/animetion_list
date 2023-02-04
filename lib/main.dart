@@ -15,6 +15,7 @@ import 'animatedPositionedDirectionalClass.dart';
 import 'animatedSizeClass.dart';
 import 'animatedThemeClass.dart';
 import 'heroClass.dart';
+import 'originalLIst.dart';
 
 void main() {
   runApp(const MyApp());
@@ -75,7 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
     "AnimatedModalBarrier",
     "AnimatedSize",
     "FadeInImage",
-    "Hero"
+    "Hero",
+    "OriginalLIst"
   ];
 
   @override
@@ -169,6 +171,10 @@ class _MyHomePageState extends State<MyHomePage> {
       case 14:
         route = MaterialPageRoute(
             builder: (context) => const HeroClass());
+        break;
+      case 15:
+        route = MaterialPageRoute(
+            builder: (context) => const OriginalLIstClass());
         break;
     }
     //画面遷移処理
